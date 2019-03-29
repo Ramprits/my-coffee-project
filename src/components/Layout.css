@@ -1,0 +1,9 @@
+.default-background {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgb(255, 255, 201), rgb(255, 255, 201));
+  background-position: center;
+  background-size: cover;
+}

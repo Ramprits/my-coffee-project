@@ -1,18 +1,27 @@
 import React from "react"
 
-// import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
-// import Image from "../components/image"
 import SEO from "../components/seo"
+import BackgroundImageSection from "../components/Global/BackgroundImage"
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h1 className="text-center font-weight-bold text-danger">Hi people</h1>
-    <p className="text-center">Welcome to your new Gatsby site.</p>
-    
+    <BackgroundImageSection className="default-background" imageData={data.desktop.childImageSharp.fluid} />
   </Layout>
 )
 
+export const query = graphql`
+  query {
+    desktop: file(relativePath: { eq: "aroma-aromatic-art-434213.jpg" }) {
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
 export default IndexPage

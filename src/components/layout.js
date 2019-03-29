@@ -1,19 +1,15 @@
 import React from "react"
 import "./bootstrap.min.css"
 import PropTypes from "prop-types"
-// import { StaticQuery, graphql } from "gatsby"
+import "./Layout.css"
 
 import Navbar from "./Global/Navbar"
 
 const Layout = ({ children }) => (
   <>
     <Navbar />
-    <main>{children}</main>
-    <footer className="text-center">
-      © {new Date().getFullYear()}, Built with
-      {` `}
-      <a href="https://www.gatsbyjs.org">Gatsby</a>
-    </footer>
+    <div>{children}</div>
+
   </>
 )
 
