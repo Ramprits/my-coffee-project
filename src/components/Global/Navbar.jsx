@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Logo from "../../images/coffee.png"
 import {
   Collapse,
@@ -7,7 +8,6 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink,
 } from "reactstrap"
 
 export default class Navigation extends React.Component {
@@ -36,12 +36,14 @@ export default class Navigation extends React.Component {
             <Collapse isOpen={this.state.isOpen} navbar>
               <Nav className="ml-auto" navbar>
                 <NavItem>
-                  <NavLink href="/components/">Products</NavLink>
+                  <Link className="nav-link" to="/about/">
+                    About
+                  </Link>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://github.com/reactstrap/reactstrap">
+                  <Link className="nav-link" to="/contact/">
                     Contact
-                  </NavLink>
+                  </Link>
                 </NavItem>
               </Nav>
             </Collapse>

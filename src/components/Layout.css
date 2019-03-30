@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
 :root {
   --mainBrown: #2d1ef1;
   --mainYellow: rgb(255, 158, 9);
@@ -33,6 +34,16 @@ h6 {
 }
 .default-background {
   min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(rgba(255, 158, 9, 0.5), rgba(255, 158, 9, 0.5));
+  background-position: center;
+  background-size: cover;
+}
+
+.about-background {
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;

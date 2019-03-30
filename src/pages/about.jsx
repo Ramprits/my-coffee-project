@@ -7,11 +7,11 @@ import SEO from "../components/seo"
 import Info from "../components/Home/Info"
 import BackgroundImageSection from "../components/Global/BackgroundImage"
 
-const IndexPage = ({ data }) => (
+const AboutPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="About Page" keywords={[`gatsby`, `application`, `react`]} />
     <BackgroundImageSection
-      className="default-background"
+      className="about-background"
       imageData={data.desktop.childImageSharp.fluid}
     />
     <Info
@@ -23,7 +23,7 @@ const IndexPage = ({ data }) => (
 
 export const query = graphql`
   query {
-    desktop: file(relativePath: { eq: "aroma-aromatic-art-434213.jpg" }) {
+    desktop: file(relativePath: { eq: "art-blur-cappuccino-302899.jpg" }) {
       childImageSharp {
         fluid {
           ...GatsbyImageSharpFluid_withWebp
@@ -32,4 +32,4 @@ export const query = graphql`
     }
   }
 `
-export default IndexPage
+export default AboutPage
